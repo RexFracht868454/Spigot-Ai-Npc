@@ -11,3 +11,5 @@ This is a plugin wich allows you to have NPCs with the ChatGPT Ai.
 >**How to use:**
    1. Create an Npc with /summon <type> <name> <role>
    2. Right click the NPC to talk with him
+---------------------------------------------------------------------------------------------------------------
+>**Currently after a server reload it will not load the role from the npc but I will fix this problem**
