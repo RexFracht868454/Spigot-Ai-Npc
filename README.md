@@ -7,6 +7,10 @@ This is a plugin wich allows you to have NPCs with the ChatGPT Ai.
    2. Install this plugin 
    3. Put each of the plugins in the same plugins folder on your server 
    4. Start your server 
+   5. Create an Acount on https://platform.openai.com/docs/introduction
+   6. Click on your Profil -> "view API Keys" -> "create new secret key" then copy the key
+   7. Put the key in the config.yml from this plugin by api-key
+   8. Restart or reload your server
 ---------------------------------------------------------------------------------------------------------------
 >**How to use:**
    1. Create an Npc with /summon <type> <name> <role>
