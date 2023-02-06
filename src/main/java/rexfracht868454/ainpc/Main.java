@@ -3,9 +3,11 @@ package rexfracht868454.ainpc;
 import net.citizensnpcs.api.CitizensAPI;
 import net.citizensnpcs.api.trait.TraitInfo;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.checkerframework.checker.nullness.qual.NonNull;
+import org.jetbrains.annotations.NotNull;
 import rexfracht868454.ainpc.command.SummonNPCCommand;
 import rexfracht868454.ainpc.listener.NPCListener;
 import rexfracht868454.ainpc.utils.ConvoTrait;
@@ -25,6 +27,7 @@ public final class Main extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
+        saveDefaultConfig();
         this.adventure = BukkitAudiences.create(this);
 
         if(getServer().getPluginManager().getPlugin("Citizens") == null || !getServer().getPluginManager().getPlugin("Citizens").isEnabled()) {
@@ -42,5 +45,11 @@ public final class Main extends JavaPlugin implements Listener {
     @Override
     public void onDisable() {
 
+    }
+
+    @NotNull
+    @Override
+    public FileConfiguration getConfig() {
+        return super.getConfig();
     }
 }

@@ -83,7 +83,7 @@ public class ConvoTrait extends Trait {
         plugin.adventure().sender(p).sendActionBar(Component.text(ChatColor.GREEN + "Thinking..."));
         p.playSound(p.getLocation(), Sound.BLOCK_NOTE_BLOCK_HARP, 1, 1);
 
-        OpenAiService service = new OpenAiService("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", 0);
+        OpenAiService service = new OpenAiService(plugin.getConfig().getString("api-key"), 0);
         CompletionRequest request = CompletionRequest.builder()
                 .prompt(this.conversation.toString())
                 .model("text-davinci-003")
