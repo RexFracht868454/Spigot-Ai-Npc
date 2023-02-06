@@ -2,6 +2,8 @@
 
 This is a plugin wich allows you to have NPCs with an Artificial Intelligence.
 ---------------------------------------------------------------------------------------------------------------
+![image](https://user-images.githubusercontent.com/88945501/217047053-23bb26ba-58ef-40cd-8c34-07b10a756bc2.png)
+---------------------------------------------------------------------------------------------------------------
 >**Setup:**
    1. Install [Citizens](https://ci.citizensnpcs.co/job/Citizens2/lastSuccessfulBuild/) 
    2. Install this [plugin](https://github.com/RexFracht868454/Spigot-Ai-Npc/actions)
