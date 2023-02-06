@@ -3,6 +3,7 @@
 This is a plugin wich allows you to have NPCs with an Artificial Intelligence.
 ---------------------------------------------------------------------------------------------------------------
 ![image](https://user-images.githubusercontent.com/88945501/217047053-23bb26ba-58ef-40cd-8c34-07b10a756bc2.png)
+![image](https://user-images.githubusercontent.com/88945501/217047328-c0fce3fa-e01a-4b1c-b6e0-0c9ceb7f5072.png)
 ---------------------------------------------------------------------------------------------------------------
 >**Setup:**
    1. Install [Citizens](https://ci.citizensnpcs.co/job/Citizens2/lastSuccessfulBuild/) 
