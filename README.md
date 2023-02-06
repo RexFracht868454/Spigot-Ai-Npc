@@ -1,6 +1,6 @@
 # Spigot-Ai-Npc
 
-This is a plugin wich allows you to have NPCs with the ChatGPT API.
+This is a plugin wich allows you to have NPCs with an Artificial Intelligence.
 ---------------------------------------------------------------------------------------------------------------
 >**Setup:**
    1. Install [Citizens](https://ci.citizensnpcs.co/job/Citizens2/lastSuccessfulBuild/) 
