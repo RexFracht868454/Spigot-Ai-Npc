@@ -8,7 +8,7 @@ This is a plugin wich allows you to have NPCs with an Artificial Intelligence.
    3. Put each of the plugins in the plugins folder for your server 
    4. Start your server 
    5. Create an [OpenAI](https://platform.openai.com/docs/introduction) Acount
-   6. Click on your Profil -> "`view API Keys`" -> "`create new secret key`" then copy the key
+   6. Click on your Profil -> `view API Keys` -> `create new secret key` then copy the key
    7. Put the key in the `config.yml` from this plugin by api-key
    8. Restart or reload your server
 ---------------------------------------------------------------------------------------------------------------
