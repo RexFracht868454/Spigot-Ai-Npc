@@ -3,6 +3,8 @@ package rexfracht868454.ainpc;
 import net.citizensnpcs.api.CitizensAPI;
 import net.citizensnpcs.api.trait.TraitInfo;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
+import org.bukkit.ChatColor;
+import org.bukkit.Color;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -27,6 +29,12 @@ public final class Main extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
+        if (this.getConfig().getString("api-key").equals("")) {
+            this.getLogger().warning("Api-key is null!");
+        }
+        if (this.getConfig().getString("api-key").contains(" ")) {
+            this.getLogger().warning("Api-key are not an available!");
+        }
         saveDefaultConfig();
         this.adventure = BukkitAudiences.create(this);
 
@@ -38,7 +46,7 @@ public final class Main extends JavaPlugin implements Listener {
 
         CitizensAPI.getTraitFactory().registerTrait(TraitInfo.create(ConvoTrait.class));
 
-        getCommand("summonnpc").setExecutor(new SummonNPCCommand());
+        getCommand("summonnpc").setExecutor(new SummonNPCCommand(this));
         getServer().getPluginManager().registerEvents(new NPCListener(this), this);
     }
 

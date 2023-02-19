@@ -8,17 +8,30 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
+import rexfracht868454.ainpc.Main;
 import rexfracht868454.ainpc.utils.ConvoTrait;
 
+import java.util.ArrayList;
+
 public class SummonNPCCommand implements CommandExecutor {
+
+    private Main plugin;
+
+    public SummonNPCCommand(Main plugin) {
+        this.plugin = plugin;
+    }
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            if (args.length < 3) {
-                player.sendMessage(ChatColor.RED + command.getUsage());
-                return true;
+            if (args.length == 1) {
+                String action = args[1];
+                if (action.equalsIgnoreCase("help")) {
+                    player.sendMessage("");
+                } else if (action.equalsIgnoreCase("list")) {
+                    player.sendMessage(ChatColor.GREEN + "List of all ..." + ChatColor.YELLOW + "\n-> zombie,\n-> skeleton,\n-> villager,\n-> creeper");
+                }
             }
 
             String type = args[0];
@@ -54,6 +67,8 @@ public class SummonNPCCommand implements CommandExecutor {
                 player.sendMessage( ChatColor.GREEN + "They will now have conversations with you as a " + ChatColor.YELLOW + role);
 
             }  else {
+                player.sendMessage(ChatColor.RED + "");
+                player.sendMessage(ChatColor.RED + command.getUsage());
                 player.sendMessage("Use one of them: zombie, skeleton, villager, creeper");
             }
         }
